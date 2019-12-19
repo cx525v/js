@@ -46,7 +46,15 @@ createPost({title:'post three',body:'three body'})
 .catch(err => ..);
 //////
 
+///Promise.all
+const promise1 = Promise.resolve('Hello world');
+const promise2 = 10;
+const promise3 new Promise((resolve, reject) => {
+})
 
+const promise4 = fetch('xxx').then(res => res.json());
+Promise.all([promise1, promise2, promise3]).then(
+values =console.log(values));
 
 
 
