@@ -41,7 +41,9 @@ function createPost(post) {
   }
  );
 }
-createPost({title:'post three',body:'three body'}).then(getPosts());
+createPost({title:'post three',body:'three body'})
+.then(getPosts())
+.catch(err => ..);
 //////
 
 
