@@ -1,0 +1,25 @@
+function getUser(id, onSuccess, onFailure) {
+ $.getJSON({
+    url: `https://api.github.com/users/${id}`,
+    success: OnSuccess,
+    error: onFailure
+ });
+}
+
+
+function getWeather(user, onSuccess, onFailure) {
+ $.getJSON({
+    url: getLocationURL(user.location.split(",")
+    success: OnSuccess,
+    error: onFailure
+ });
+}
+
+$("#btn").on("click", () => {
+  getUser('xxx', (user) => {
+   getWeather(user, (weather) => {
+   },
+   showError
+  },
+  showError)
+});
