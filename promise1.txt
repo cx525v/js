@@ -29,3 +29,29 @@ $("#btn").on("click",()=> {
   });
 });
 
+/////
+callback
+function getWeather(user) {
+  return new Promise((resolve, reject) => {
+   $.getJSON({
+      url: getLocationURL(user.location.split(",")),
+      success(weather){
+      resolve({
+        user,
+        weather: weather.query.results
+      })
+      },
+      error: reject
+   });
+  })
+}
+
+//promise
+$("#btn").on("click",()=> {
+   getUser('xxx')
+   .then(getWeather) 
+   .then((data) => {
+     ...
+   })
+   .catch(showError)
+});
