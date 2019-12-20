@@ -1,0 +1,11 @@
+
+//async await
+$("#btn").on("click",async()=> {
+try {
+  const user = await getUser('...');
+  const weather = await getWeather(user);
+  ....
+}catch(error){
+}
+ 
+});
