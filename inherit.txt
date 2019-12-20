@@ -12,3 +12,8 @@ function Magazine(title, author, year, month) {
   Book.call(this, title, author, year);
   this.month = month;
 }
+
+//inherit summary
+Magazine.prototype = Object.create(Book.prototype);
+
+Magazine.prototype.constuctor = Magazine;
