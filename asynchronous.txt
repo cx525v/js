@@ -1,0 +1,9 @@
+function longRun(callback) {
+  setTimeout( function() {   //asynchronous
+    callBack('all done');
+  }, 0);
+}
+
+console.log(new Date().getTime());
+longRun((msg) => console.log(msg));
+console.log(new Date().getTime());
